@@ -3,7 +3,7 @@ const Note = require('../models/note.model.js')
 exports.create = (req, res) => {
   if (!req.body.content) {
     return res.status(400).send({
-      message: "Note content can not be empty"
+      message: "Note content cannot be empty"
     })
   }
 
@@ -49,7 +49,7 @@ exports.findOne = (req, res) => {
         })
       }
       return res.status(500).send({
-        message: "Error retrieving note with id" + req.params.noteid
+        message: "Error retrieving note with id" + req.params.noteId
       })
     })
 }
